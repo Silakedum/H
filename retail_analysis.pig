@@ -27,3 +27,13 @@ sorted_store_revenue = ORDER store_revenue BY Total_Revenue DESC;
 STORE category_sales INTO '/user/hadoop/retail/output/category_sales' USING PigStorage(',');
 STORE top_products INTO '/user/hadoop/retail/output/top_products' USING PigStorage(',');
 STORE sorted_store_revenue INTO '/user/hadoop/retail/output/store_revenue' USING PigStorage(',');
+
+
+
+#hadoop fs -mkdir -p /user/hadoop/retail/input
+#hadoop fs -put ~/transactions.csv /user/hadoop/retail/input/
+#hadoop fs -ls /user/hadoop/retail/input
+
+#hadoop fs -cat /user/hadoop/retail/output/category_sales/part-00000
+#hadoop fs -cat /user/hadoop/retail/output/top_products/part-00000
+#hadoop fs -cat /user/hadoop/retail/output/store_revenue/part-00000
